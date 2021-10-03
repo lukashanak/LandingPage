@@ -1,0 +1,24 @@
+
+- .container
+    -- h1 . title
+    -- p . description
+    -- .video-playback
+    -- btn .action-btn
+- .container
+    -- i .arrow-icon
+    -- h2 .sub-title
+    -- .step-row
+        --- .step-text
+            ---- img .step-number
+            ---- h3 .step-title
+            ---- p .step-description
+        --- .step-img 
+- .container .testimonials
+    -- h2 .sub-title
+    -- .flex-row
+        --- .box
+        --- .box
+- .container
+    -- .row 
+        --- .row-text 
+        --- .
