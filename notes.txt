@@ -1,24 +1,15 @@
+Okay
+Takze bude potřeba opět plánovat 
+A vědět předem co chceš udělat
+Ještě před tím než to začneš dělat
 
-- .container
-    -- h1 . title
-    -- p . description
-    -- .video-playback
-    -- btn .action-btn
-- .container
-    -- i .arrow-icon
-    -- h2 .sub-title
-    -- .step-row
-        --- .step-text
-            ---- img .step-number
-            ---- h3 .step-title
-            ---- p .step-description
-        --- .step-img 
-- .container .testimonials
-    -- h2 .sub-title
-    -- .flex-row
-        --- .box
-        --- .box
-- .container
-    -- .row 
-        --- .row-text 
-        --- .
+Takže
+Co je problém?
+Potřebuji, aby ten text-box měl pevně danej počet PX, od té doby jak bude media queries 1501px
+
+Otázka je, jak toho docílit.
+
+Prostě nastavíš statickou šířku v PX
+
+Předpokládám
+
