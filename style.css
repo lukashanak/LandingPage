@@ -73,7 +73,7 @@ nav ul {
     border-radius: 6px;
     background-color: #FCAF17;
     cursor: pointer;
-    margin-top: 50px;
+    margin-top: 45px;
 }
 
 .action-btn span {
@@ -92,6 +92,9 @@ nav ul {
     .navbar {
         max-width: none;
     } 
+    .logo-icon {
+        width: 140px;
+    }
     .introduction {
         margin-top: 170px;
         display: flex;
@@ -117,6 +120,9 @@ nav ul {
         width: 100%;
         max-width:850px;
     } 
+    .action-btn {
+        margin-top: 28px;
+    }
     .action-btn-desktop {
         display: inline-block;
     }
