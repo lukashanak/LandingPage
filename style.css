@@ -263,3 +263,77 @@ container 2
     }
 
 }
+
+
+
+
+
+/* =======
+TESTIMONIALS 
+======== */
+
+
+.testimonials {
+    padding-top: 96px
+}
+
+.testimonials-card {
+    width: 100%;
+    margin-bottom: 20px;
+    border: 1px solid #707070;
+    border-radius: 6px;
+    padding: 30px 50px 23px 37px;  /* t r b l, starting from the TOP */
+    max-width: 516px;
+}
+
+.testimonials-card-top {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 12px;
+}
+
+.card-avatar {
+    margin-right: 5px;
+}
+
+.card-name {
+    font-size: 15px;
+    font-weight: 600;
+    color: #111111;
+    vertical-align: top;
+    position:relative;
+    top: 8px;
+}
+
+
+.card-name-description {
+    font-size: 10px;
+    color: #B2B2B2;
+    vertical-align: top;
+    position:relative;
+    top: 12px;
+}
+
+.card-review {
+    font-size: 16px;
+}
+
+@media (max-width: 380px) {
+    .card-name-description {
+        display: none;
+    }
+}
+
+
+@media (min-width: 1500px) {
+    .testimonials {
+        padding-top: 146px
+    }
+    .testimonials-row {
+        display: flex;
+        justify-content: center;
+        gap: 100px;
+    }
+}
+
+
