@@ -21,7 +21,8 @@ body {
 }
 
 .container-fluid {
-    width: 85%; 
+    width: 85%;
+    max-width: 550px;
     margin: auto;
 }
 
@@ -96,6 +97,9 @@ nav ul {
 }
 
 @media (min-width: 1500px) {
+    .container-fluid {
+        max-width: none;
+    }
     .navbar {
         max-width: none;
     } 
@@ -148,32 +152,93 @@ todo:
 container 2
 =========== */
 
-.steps {
-    background-color: #F8F8F8;
-    height: 400px;
-    padding-top: 50px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-}
-
 .arrowDown {
     width: 40px;
-    margin-bottom: 50px;
+    margin-bottom: 70px;
 }
 
 .text-center {
     text-align: center;
 }
 
-h2 {
+.section-title {
     font-size: 25px;
+    font-weight: 600;
+    margin-bottom: 72px;
 }
 
-h3 {
+.step-title {
     font-size: 18px;
+    font-weight: 600;
+    position: relative;
 }
+
+.step-description {
+    margin-bottom: 36px;
+}
+
+
+.steps {
+    background-color: #F8F8F8;
+    padding-top: 50px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.step-row {
+    margin-bottom: 76px;
+}
+
+.row-item {
+    width: 100%;
+}
+
+.stepImage {
+    width: 550px;
+    max-width: 100%;
+}
+
+
+.step-text-div {
+    margin-left: 55px;
+    
+}
+
+.numberImg {
+    position: relative;
+    top: 44px;
+    right: -3px
+}
+
 
 @media (min-width: 1500px) {
+    .row {
+        display: flex;
+        justify-content: center;
+    }
+    .step-row:first-child {
+        flex-direction: row-reverse;
+    }
+    
+    .step-row:nth-child(3) {
+        flex-direction: row-reverse;
+    }
+    .section-title {
+        font-size: 50px;
+    }
+    .step-title {
+        font-size: 35px;
+    }
+    .numberImg {
+        width: 157px;
+        top: 70px;
+        right: 60px;
+    }
 
+
+    .row-item-text {
+        display: flex;
+        flex-direction: column;
+    }
 }
