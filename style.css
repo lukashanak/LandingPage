@@ -205,17 +205,13 @@ container 2
     
 }
 
-.numberImg {
-    position: relative;
-    top: 44px;
-    right: -3px
-}
 
 
 @media (min-width: 1500px) {
     .row {
         display: flex;
         justify-content: center;
+        margin-bottom: 100px;
     }
     .step-row:first-child {
         flex-direction: row-reverse;
@@ -240,5 +236,17 @@ container 2
     .row-item-text {
         display: flex;
         flex-direction: column;
+        position: relative;
+        top: 50px;
     }
+    .step-text-div {
+        width: 70%;
+    }
+    
+    .numberImg {
+        position: absolute;
+        top: -80px;
+        left:  -70px;
+    }
+
 }
