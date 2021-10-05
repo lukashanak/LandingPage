@@ -202,7 +202,18 @@ container 2
 
 .step-text-div {
     margin-left: 55px;
-    
+}
+
+
+.row-item-text {
+    display: flex;
+    flex-direction: column;
+    position: relative;
+}
+.numberImg {
+    position: absolute;
+    top: -37px;
+    left: 5px;
 }
 
 
@@ -226,6 +237,12 @@ container 2
     .step-title {
         font-size: 35px;
     }
+
+    .step-text-div {
+        width: 70%;
+    }
+    
+
     .numberImg {
         width: 157px;
         top: 70px;
@@ -239,13 +256,9 @@ container 2
         position: relative;
         top: 50px;
     }
-    .step-text-div {
-        width: 70%;
-    }
-    
     .numberImg {
         position: absolute;
-        top: -80px;
+        top: -85px;
         left:  -70px;
     }
 
