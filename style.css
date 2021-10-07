@@ -229,7 +229,6 @@ container 2
 }
 
 
-
 @media (min-width: 1500px) {
     .row {
         display: flex;
@@ -340,7 +339,8 @@ TESTIMONIALS
 
 @media (min-width: 1500px) {
     .testimonials {
-        padding-top: 146px
+        padding-top: 146px;
+        padding-bottom: 265px
     }
     .testimonials-row {
         display: flex;
@@ -412,8 +412,33 @@ TESTIMONIALS
 .ending-title {
     font-size: 30px;
 }
+.btn-group-desktop-only {
+    display: none;
+}
+
+.ending-image {
+
+}
 
 @media (min-width: 1500px) {
-
+    .ending-container {
+        flex-direction: row;
+        gap: 100px;
+    }
+    .ending-title {
+        font-size: 45px;
+        margin-bottom: 33px;
+        text-align: left;
+    }
+    .btn-group {
+        margin-top: 0;
+        justify-content: start;
+    }
+    .btn-group-desktop-only {
+        display: flex;
+    }
+    .btn-group-mobile-only {
+        display: none;
+    }
 }
 
