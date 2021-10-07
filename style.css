@@ -363,6 +363,7 @@ TESTIMONIALS
     display: flex;
     flex-direction: column;
     justify-content: center;
+    padding-bottom: 74px;
 }
 
 
@@ -416,14 +417,11 @@ TESTIMONIALS
     display: none;
 }
 
-.ending-image {
-
-}
-
 @media (min-width: 1500px) {
     .ending-container {
         flex-direction: row;
         gap: 100px;
+        padding-bottom: 259px;
     }
     .ending-title {
         font-size: 45px;
