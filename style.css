@@ -6,6 +6,10 @@
     box-sizing: border-box;
   }
 
+html {
+    scroll-behavior: smooth;
+}
+
 body {
     margin: 0;
     padding: 0;
@@ -286,16 +290,20 @@ TESTIMONIALS
 
 .testimonials {
     padding-top: 96px;
-    padding-bottom: 96px;
+    background-color: #E9E9E9;
+}
+
+.testimonials-row {
+    margin-bottom: 89px;
 }
 
 .testimonials-card {
     width: 100%;
     margin-bottom: 20px;
-    border: 1px solid #707070;
     border-radius: 6px;
     padding: 30px 50px 23px 37px;  /* t r b l, starting from the TOP */
     max-width: 516px;
+    background-color: white;
 }
 
 .testimonials-card-top {
@@ -340,7 +348,7 @@ TESTIMONIALS
 @media (min-width: 1500px) {
     .testimonials {
         padding-top: 146px;
-        padding-bottom: 265px
+        padding-bottom: 100px
     }
     .testimonials-row {
         display: flex;
@@ -421,6 +429,7 @@ TESTIMONIALS
     .ending-container {
         flex-direction: row;
         gap: 100px;
+        padding-top: 150px;
         padding-bottom: 259px;
     }
     .ending-title {
