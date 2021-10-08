@@ -221,10 +221,6 @@ container 2
     align-items: center;
 }
 
-.row-item {
-    width: 100%;
-}
-
 .stepImage {
     width: 550px;
     max-width: 100%;
@@ -253,6 +249,7 @@ container 2
         display: flex;
         justify-content: center;
         margin-bottom: 100px;
+        gap: 20px;
     }
     .step-row {
         margin-bottom: 76px;
@@ -281,8 +278,12 @@ container 2
         top: 70px;
         right: 60px;
     }
-
-
+    .row-item {
+        width: 50%;
+    }
+    .stepImage {
+        width: 100%;
+    }
     .row-item-text {
         display: flex;
         flex-direction: column;
