@@ -182,9 +182,6 @@ todo:
 - fix some small issues (for example, the title has to be in 2 rows not in just one)
 */
 
-/* =========
-container 2
-=========== */
 
 .arrowDown {
     width: 40px;
@@ -220,6 +217,11 @@ container 2
     flex-direction: column;
     align-items: center;
 }
+
+
+/* ==========
+FUCKING STEPS (FIRST STEP, SECOND STEP ETC.) SECTION
+========= */
 
 .stepImage {
     width: 550px;
