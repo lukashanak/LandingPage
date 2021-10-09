@@ -303,6 +303,20 @@ FUCKING STEPS (FIRST STEP, SECOND STEP ETC.) SECTION
     .arrowDown {
         margin-bottom: 149px;
     }
+
+
+
+
+.row-item-text--odd {
+    align-items: flex-end;
+}
+
+.row-item-text--odd .step-title{
+    position: relative;
+}
+
+
+
 }
 
 
