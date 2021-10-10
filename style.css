@@ -183,6 +183,7 @@ todo:
 .arrowDown {
     width: 40px;
     margin-bottom: 70px;
+    cursor: pointer;
 }
 
 .text-center {
@@ -192,18 +193,17 @@ todo:
 .section-title {
     font-size: 25px;
     font-weight: 600;
-    margin-bottom: 192px;
+    margin-bottom: 102px;
 }
 
-
-.step-title {
-    font-size: 18px;
-    font-weight: 600;
-    position: relative;
-}
-
-.step-description {
-    margin-bottom: 36px;
+@media (min-width: 1500px) {
+    .section-title {
+        font-size: 50px;
+        margin-bottom: 192px;
+    }
+    .arrowDown {
+        width: 70px;
+    }
 }
 
 
@@ -220,6 +220,28 @@ todo:
 2. STEPS SECTION
 ========= */
 
+/* FONTS + FONT SPACING */
+
+.step-title {
+    font-size: 18px;
+    font-weight: 600;
+    position: relative;
+}
+
+.step-description {
+    font-size: 16px;
+}
+
+
+@media (min-width: 1500px) {
+    .step-title {
+        font-size: 35px;
+    }
+    .step-description {
+        font-size: 22px;
+    }
+}
+
 
 /* 2.1. ROW, LAYOUT */
 
@@ -229,7 +251,6 @@ todo:
         display: flex;
         justify-content: center;
         margin-bottom: 60px;
-        gap: 50px;
     }
     
     .row > * {
@@ -248,20 +269,13 @@ todo:
     .row-odd > .text-container {
         display: flex;
         justify-content: flex-start;
-        border: 2px solid red;
     }
     
     .row-even > .text-container {
         display: flex;
-        background-color: yellow;
         justify-content: flex-end;
     }
-    
-    .row-odd * .bottom {
-        
-    }
-    
-    
+      
             .sub-container {
                 width: 600px;
                 display: flex;
@@ -312,10 +326,6 @@ todo:
 
 @media (min-width: 1500px) {
 
-.img-container {
-    background-color: royalblue;
-}
-
     .stepImg {
         width: 100%;
     }
@@ -326,17 +336,11 @@ todo:
 @media (max-width: 1500px) {
     .row {
         flex-direction: column;
+        margin-bottom: 80px;
     }
     .row > * {
         width: 100%;
     }
-    .step-title {
-        font-size: 18px;
-    }
-    .step-description {
-        font-size: 16px;
-    }
-
     .counterImg {
         width: 74px;
         position: absolute;
@@ -463,13 +467,12 @@ TESTIMONIALS
 
 /* ending */
 
-
-
 .ending-container {
     display: flex;
     flex-direction: column;
     justify-content: center;
     padding-bottom: 74px;
+    padding-top: 96px;
 }
 
 
@@ -535,6 +538,12 @@ TESTIMONIALS
         gap: 100px;
         padding-top: 150px;
         padding-bottom: 259px;
+    }
+    .ending-top {
+        max-width: 598px;
+        display: flex;
+        flex-direction: column;
+       justify-content: center;
     }
     .ending-title {
         font-size: 45px;
