@@ -20,9 +20,6 @@ body {
     margin: 0;
 }
 
-.container {
-    width: 100%;
-}
 
 .container-fluid {
     width: 85%;
@@ -195,7 +192,7 @@ todo:
 .section-title {
     font-size: 25px;
     font-weight: 600;
-    margin-bottom: 72px;
+    margin-bottom: 192px;
 }
 
 
@@ -226,83 +223,94 @@ todo:
 
 /* 2.1. ROW, LAYOUT */
 
-.row {
-    width: 100%;
-    display: flex;
-    justify-content: center;
-    margin-bottom: 60px;
-    gap: 50px;
+@media (min-width: 1500px) {
+    .row {
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        margin-bottom: 60px;
+        gap: 50px;
+    }
+    
+    .row > * {
+        width: 50%;
+    }
+    
+    .row-odd {
+        flex-direction: row-reverse;
+    }
 }
 
-.row > * {
-    width: 50%;
-}
-
-.row-odd {
-    flex-direction: row-reverse;
-}
 
 /* 2.2 TEXT CONTAINER */
 
-.row-odd > .text-container {
-    display: flex;
-    justify-content: flex-start;
-    background-color: yellow;
-}
-
-.row-even > .text-container {
-    display: flex;
-    background-color: yellow;
-    justify-content: flex-end;
-}
-
-.row-odd * .bottom {
+@media (min-width: 1500px) {
+    .row-odd > .text-container {
+        display: flex;
+        justify-content: flex-start;
+        border: 2px solid red;
+    }
     
-}
-
-
-        .sub-container {
-            width: 600px;
-            display: flex;
-            align-items: center;
-            position: relative;
-        }
-
-            .top {
+    .row-even > .text-container {
+        display: flex;
+        background-color: yellow;
+        justify-content: flex-end;
+    }
+    
+    .row-odd * .bottom {
+        
+    }
+    
+    
+            .sub-container {
+                width: 600px;
+                display: flex;
+                align-items: center;
                 position: relative;
             }
-            .bottom {
-                position: absolute;
-            }
-
-            .row-odd * .top {
-                left: 0px;
-                top: -120px;
-            }
-
-            .row-odd * .bottom {
-                left: 120px;
-                width: 70%;
-            }
-
-
-            .row-even * .top {
-                left: 60px;
-                top: -120px;
-            }   
-
-            .row-even * .bottom {
-                right: 0px;
-                width: 70%;
-            }
-
-            .counterImg {
-                width: 157px;
-            }
-
+    
+                .top {
+                    position: relative;
+                }
+                .bottom {
+                    position: absolute;
+                }
+    
+                .row-odd * .top {
+                    left: 0px;
+                    top: -120px;
+                }
+    
+                .row-odd * .bottom {
+                    left: 120px;
+                    width: 70%;
+                }
+    
+    
+                .row-even * .top {
+                    left: 60px;
+                    top: -120px;
+                }   
+    
+                .row-even * .bottom {
+                    right: 0px;
+                    width: 70%;
+                }
+    
+                .counterImg {
+                    width: 157px;
+                }
+    
+    
+    .step-title {
+        font-size: 35px;
+    }
+}
 
 
 /* 2.3. IMAGE CONTAINER */
+
+@media (min-width: 1500px) {
 
 .img-container {
     background-color: royalblue;
@@ -312,7 +320,7 @@ todo:
         width: 100%;
     }
 
-
+}
 
 
 @media (max-width: 1500px) {
@@ -322,11 +330,53 @@ todo:
     .row > * {
         width: 100%;
     }
+    .step-title {
+        font-size: 18px;
+    }
+    .step-description {
+        font-size: 16px;
+    }
+
     .counterImg {
         width: 74px;
+        position: absolute;
+        top: -37px;
+        left: 0px;
     }
-}
+    .text-container {
+        display: flex;
+        flex-direction: column;
+        position: relative;
+    }
+    .bottom {
+        margin-left: 50px;
+    }
+    .img-container {
+        display: flex;
+        justify-self: center;
+        align-items: center;
+    }
+    .stepImg {
+        width: 100%;
+    }
 
+    /*
+    .counterImg {
+        width: 74px;
+        position: absolute;
+        top: 20px;
+        left: -30px;
+    }
+    .text-container {
+        margin-bottom: 80px;
+    }
+    .row-odd * .bottom {
+        left: 25px;
+        width: 100%;
+    }
+    */
+
+}
 
 
 
