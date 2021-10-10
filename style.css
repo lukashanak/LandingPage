@@ -223,96 +223,11 @@ todo:
 FUCKING STEPS (FIRST STEP, SECOND STEP ETC.) SECTION
 ========= */
 
-.stepImage {
-    width: 550px;
-    max-width: 100%;
-}
-
-
-.step-text-div {
-    margin-left: 55px;
-}
-
-
-.row-item-text {
-    display: flex;
-    flex-direction: column;
-    position: relative;
-}
-.numberImg {
-    position: absolute;
-    top: -37px;
-    left: 5px;
-}
-
 
 @media (min-width: 1500px) {
-    .row {
-        display: flex;
-        justify-content: center;
-        margin-bottom: 100px;
-        gap: 20px;
-    }
-    .step-row {
-        margin-bottom: 76px;
-    }
-    .step-row:first-child {
-        flex-direction: row-reverse;
-    }
-    
-    .step-row:nth-child(3) {
-        flex-direction: row-reverse;
-    }
-    .section-title {
-        font-size: 50px;
-    }
-    .step-title {
-        font-size: 35px;
-    }
-
-    .step-text-div {
-        width: 70%;
-    }
     
 
-    .numberImg {
-        width: 157px;
-        top: 70px;
-        right: 60px;
-    }
-    .row-item {
-        width: 50%;
-    }
-    .stepImage {
-        width: 100%;
-    }
-    .row-item-text {
-        display: flex;
-        flex-direction: column;
-        position: relative;
-        top: 50px;
-    }
-    .numberImg {
-        position: absolute;
-        top: -85px;
-        left:  -70px;
-    }
-    .section-title-steps {
-        margin-bottom: 160px;
-    }
-    .arrowDown {
-        margin-bottom: 149px;
-    }
 
-
-
-
-.row-item-text--odd {
-    align-items: flex-end;
-}
-
-.row-item-text--odd .step-title{
-    position: relative;
 }
 
 
