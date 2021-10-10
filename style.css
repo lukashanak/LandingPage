@@ -224,10 +224,114 @@ FUCKING STEPS (FIRST STEP, SECOND STEP ETC.) SECTION
 ========= */
 
 
-@media (min-width: 1500px) {
-    
+
+/* ROW */
+
+.row {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    margin-bottom: 60px;
+}
+
+.row > * {
+    width: 50%;
+}
+
+.row:nth-child(odd) {
+    flex-direction: row-reverse;
+}
 
 
+/* TEXT CONTAINER */ 
+
+.text-container {
+    display: flex;
+    background-color: yellow;
+}
+
+.text-container--first {
+    justify-content: flex-start;
+}
+
+.text-container--second {
+    justify-content: flex-end ;
+}
+
+.sub-container {
+    width: 600px;
+    display: flex;
+    align-items: center;
+    position: relative;
+}
+
+
+
+
+/*
+left = top
+right = bottom 
+*/
+
+
+/* first - odd */
+
+.left-first {
+    position: relative;
+    left: 0px;
+    top: -120px;
+}
+
+.right-first {
+    position: absolute;
+    left: 0px;
+    width: 70%;
+}
+
+/* second - even */
+
+.left-second {
+    position: relative;
+    left: 60px;
+    top: -120px;
+}
+
+.right-second {
+    position: absolute;
+    right: 0px;
+    width: 70%;
+}
+
+
+
+
+.counterImg {
+    width: 157px;
+}
+
+/* IMAGE CONTAINER */
+
+.img-container {
+    background-color: royalblue;
+}
+
+.stepImg {
+    width: 100%;
+}
+
+
+
+
+@media (max-width: 1500px) {
+    .row {
+        flex-direction: column;
+    }
+    .row > * {
+        width: 100%;
+    }
+    .counterImg {
+        width: 74px;
+    }
 }
 
 
@@ -316,6 +420,8 @@ TESTIMONIALS
 
 /* ending */
 
+
+
 .ending-container {
     display: flex;
     flex-direction: column;
@@ -374,6 +480,12 @@ TESTIMONIALS
     display: none;
 }
 
+
+.stepImage {
+    width: 550px;
+    max-width: 100%;
+}
+
 @media (min-width: 1500px) {
     .ending-container {
         flex-direction: row;
@@ -395,6 +507,9 @@ TESTIMONIALS
     }
     .btn-group-mobile-only {
         display: none;
+    }
+    .stepImage {
+        width: 100%;
     }
 }
 
