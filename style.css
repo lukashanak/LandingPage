@@ -231,6 +231,7 @@ todo:
     display: flex;
     justify-content: center;
     margin-bottom: 60px;
+    gap: 50px;
 }
 
 .row > * {
@@ -255,6 +256,10 @@ todo:
     justify-content: flex-end;
 }
 
+.row-odd * .bottom {
+    
+}
+
 
         .sub-container {
             width: 600px;
@@ -276,7 +281,7 @@ todo:
             }
 
             .row-odd * .bottom {
-                left: 0px;
+                left: 120px;
                 width: 70%;
             }
 
