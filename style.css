@@ -220,12 +220,11 @@ todo:
 
 
 /* ==========
-FUCKING STEPS (FIRST STEP, SECOND STEP ETC.) SECTION
+2. STEPS SECTION
 ========= */
 
 
-
-/* ROW */
+/* 2.1. ROW, LAYOUT */
 
 .row {
     width: 100%;
@@ -238,86 +237,75 @@ FUCKING STEPS (FIRST STEP, SECOND STEP ETC.) SECTION
     width: 50%;
 }
 
-.row:nth-child(odd) {
+.row-odd {
     flex-direction: row-reverse;
 }
 
+/* 2.2 TEXT CONTAINER */
 
-/* TEXT CONTAINER */ 
-
-.text-container {
+.row-odd > .text-container {
     display: flex;
+    justify-content: flex-start;
     background-color: yellow;
 }
 
-.text-container--first {
-    justify-content: flex-start;
-}
-
-.text-container--second {
-    justify-content: flex-end ;
-}
-
-.sub-container {
-    width: 600px;
+.row-even > .text-container {
     display: flex;
-    align-items: center;
-    position: relative;
+    background-color: yellow;
+    justify-content: flex-end;
 }
 
 
+        .sub-container {
+            width: 600px;
+            display: flex;
+            align-items: center;
+            position: relative;
+        }
+
+            .top {
+                position: relative;
+            }
+            .bottom {
+                position: absolute;
+            }
+
+            .row-odd * .top {
+                left: 0px;
+                top: -120px;
+            }
+
+            .row-odd * .bottom {
+                left: 0px;
+                width: 70%;
+            }
 
 
-/*
-left = top
-right = bottom 
-*/
+            .row-even * .top {
+                left: 60px;
+                top: -120px;
+            }   
 
+            .row-even * .bottom {
+                right: 0px;
+                width: 70%;
+            }
 
-/* first - odd */
-
-.left-first {
-    position: relative;
-    left: 0px;
-    top: -120px;
-}
-
-.right-first {
-    position: absolute;
-    left: 0px;
-    width: 70%;
-}
-
-/* second - even */
-
-.left-second {
-    position: relative;
-    left: 60px;
-    top: -120px;
-}
-
-.right-second {
-    position: absolute;
-    right: 0px;
-    width: 70%;
-}
+            .counterImg {
+                width: 157px;
+            }
 
 
 
-
-.counterImg {
-    width: 157px;
-}
-
-/* IMAGE CONTAINER */
+/* 2.3. IMAGE CONTAINER */
 
 .img-container {
     background-color: royalblue;
 }
 
-.stepImg {
-    width: 100%;
-}
+    .stepImg {
+        width: 100%;
+    }
 
 
 
