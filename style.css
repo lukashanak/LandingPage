@@ -190,6 +190,7 @@ todo:
     cursor: pointer;
 }
 
+
 .text-center {
     text-align: center;
 }
@@ -332,8 +333,17 @@ todo:
 
     .stepImg {
         width: 100%;
+        max-width: 574px;
     }
-
+    .img-container {
+        display: flex;
+    }
+    .row-odd > .img-container {
+        justify-content: flex-end;
+    }
+    .row-even {
+        justify-content: flex-start;
+    }
 }
 
 
@@ -360,7 +370,6 @@ todo:
         margin-left: 50px;
     }
     .img-container {
-        display: flex;
         justify-self: center;
         align-items: center;
     }
@@ -480,6 +489,10 @@ TESTIMONIALS
 }
 
 
+.ending-image {
+    max-width: 539px;
+}
+
 .margin-bottom-36px {
     margin-bottom: 36px;
 }
@@ -574,6 +587,7 @@ TESTIMONIALS
     }
     .stepImage {
         width: 100%;
+        max-width: 574px;
     }
 }
 
@@ -589,4 +603,7 @@ footer {
   background-color: #141414;
   color: #F2F2F2;
 }
+
+
+
 
