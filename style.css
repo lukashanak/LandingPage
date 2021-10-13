@@ -90,6 +90,10 @@ nav ul {
     margin-top: 45px;
 }
 
+.action-btn:hover {
+    background-color: #FBBC05;
+}
+
 .action-btn span {
     font-weight: 600;
 }
@@ -503,6 +507,10 @@ TESTIMONIALS
     cursor: pointer;
 }
 
+.add-to-chrome-btn:hover {
+    background-color: #FBBC05;
+}
+
 .add-to-chrome-btn span {
     font-family: 'Poppins';
     font-weight: 600;
@@ -517,6 +525,10 @@ TESTIMONIALS
     color: #FCAF17;
     font-size: 16px;
     cursor: pointer;
+}
+
+.login-btn:hover {
+    background-color: #FAFAFA;
 }
 
 .ending-title {
