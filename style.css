@@ -35,9 +35,17 @@ header {
     height: 100vh;
 }
 
+.navbar {
+   
+}
+
 .introduction {
-    padding-top: 100px;
     max-width:550px;
+    height: 80vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
 }
 
 .navbar {
@@ -142,14 +150,13 @@ nav ul {
         width: 140px;
     }
     .introduction {
-        margin-top: 170px;
-        display: flex;
-        align-items: flex-start;
         max-width: none;
+        flex-direction: row;
     }
     .box {
         display: inline-block;
         width: 50%;
+        height: 490px;
         text-align: left;
     }
     .box-text {
