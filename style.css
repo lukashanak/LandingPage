@@ -1,3 +1,6 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,300;0,400;1,400&display=swap');
+
+
 /* TABLE OF CONTENT
 
 */
@@ -13,7 +16,7 @@ html {
 body {
     margin: 0;
     padding: 0;
-    font-family: 'Poppins';
+    font-family: 'Poppins', sans-serif;
 }
 
   h1, h2, h3, p {
@@ -33,10 +36,6 @@ body {
 
 header {
     height: 100vh;
-}
-
-.navbar {
-   
 }
 
 .introduction {
@@ -70,7 +69,6 @@ nav ul {
 
 
 .title {
-    font-family: 'Poppins';
     font-size: 35px;
     font-weight: bold;
 }
@@ -80,7 +78,6 @@ nav ul {
 }
 
 .description {
-    font-family: 'Poppins';
     font-size: 16px;
 }
 
@@ -485,13 +482,6 @@ TESTIMONIALS
 }
 
 
-
-
-.introduction, .testimonials, .steps {
-   /* display: none; */
-}
-
-
 /* ending */
 
 .ending-container {
@@ -539,7 +529,6 @@ TESTIMONIALS
 }
 
 .add-to-chrome-btn span {
-    font-family: 'Poppins';
     font-weight: 600;
 }
 
