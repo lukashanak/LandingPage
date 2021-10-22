@@ -12,7 +12,7 @@
 
 
 /* =================
-0. HTML, BODY
+0. HTML, BODY, VARIABLES, CONTAINERS
 =================== */
 
 *, *:before, *:after {
@@ -41,6 +41,8 @@ body {
     }
 }
 
+
+
 /* =================
 1. TYPOGRAPHY,  BUTTONS
 =================== */
@@ -49,83 +51,7 @@ body {
     margin: 0;
 }
 
-
-
-.action-btn {
-    margin-top: 28px;
-}
-.action-btn-desktop {
-    display: inline-block;
-}
-.action-btn-mobile {
-    display: none;
-}
-
-.action-btn-desktop {
-    display: none;
-}
-
-.action-btn {
-    width: 80%;
-    max-width: 313px;
-    height: 55px;
-    font-size: 16px;
-    color: white;
-    border: none;
-    border-radius: 6px;
-    background-color: #FCAF17;
-    cursor: pointer;
-    margin-top: 45px;
-}
-
-.action-btn:hover {
-    background-color: #FBBC05;
-}
-
-.action-btn span {
-    font-weight: 600;
-}
-
-.action-btn-mobile {
-    margin: auto;
-}
-
-
-.add-to-chrome-btn {
-    width: 60%;
-    max-width: 313px;
-    font-size: 16px;
-    color: white;
-    border: none;
-    border-radius: 6px;
-    background-color: #FCAF17;
-    cursor: pointer;
-}
-
-.add-to-chrome-btn:hover {
-    background-color: #FBBC05;
-}
-
-.add-to-chrome-btn span {
-    font-weight: 600;
-}
-
-.login-btn {
-    width: 40%;
-    max-width: 162px;
-    border: 3px solid #FCAF17;
-    border-radius: 6px;
-    background-color: white;
-    color: #FCAF17;
-    font-size: 16px;
-    cursor: pointer;
-}
-
-.login-btn:hover {
-    background-color: #FAFAFA;
-}
-
-
+/* 1.1 Play Button */
 
 .playBtn {
     position: absolute;
@@ -142,6 +68,91 @@ body {
         width: 180px;
         margin-left: -90px; 
         margin-top: -90px; 
+    }
+}
+
+
+/* 1.2 Action button */ 
+
+
+.action-btn span {
+    font-weight: 600;
+}
+
+.action-btn:hover {
+    background-color: #FBBC05;
+}
+
+.action-btn-desktop-only {
+    display: none;
+}
+
+@media (min-width: 1500px) {
+    .action-btn-desktop-only {
+        display: inline-block;
+    }
+    .action-btn-mobile-only {
+        display: none;
+    }
+}
+
+/* 1.3 Add to chrome btn */
+
+
+.action-btn {
+    width: 60%;
+    max-width: 313px;
+    height: 55px;
+    font-size: 16px;
+    color: white;
+    border: none;
+    border-radius: 6px;
+    background-color: #FCAF17;
+    cursor: pointer;
+}
+
+.login-btn {
+    width: 40%;
+    max-width: 162px;
+    height: 55px;
+    border: 3px solid #FCAF17;
+    border-radius: 6px;
+    background-color: white;
+    color: #FCAF17;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+.login-btn:hover {
+    background-color: #FAFAFA;
+}
+
+.btn-group {
+    display: flex;
+    justify-content: center;
+    gap: 24px;
+    margin-top: 40px;
+}
+
+.btn-group *{
+    padding-top: 16px;
+    padding-bottom: 16px;
+}
+
+.btn-group-desktop-only {
+    display: none;
+}
+
+@media (min-width: 1500px) {
+    .btn-group {
+        margin-top: 0;
+        justify-content: start;
+    }
+    .btn-group-desktop-only {
+        display: flex;
+    }
+    .btn-group-mobile-only {
+        display: none;
     }
 }
 
@@ -211,6 +222,7 @@ header {
 
         .description {
             font-size: 16px;
+            margin-bottom: 45px;
         }
 
 
@@ -563,8 +575,8 @@ TESTIMONIALS
     padding-top: 96px;
 }
 
-
 .ending-image {
+    width: 100%;
     max-width: 539px;
 }
 
@@ -572,24 +584,9 @@ TESTIMONIALS
     margin-bottom: 36px;
 }
 
-.btn-group {
-    display: flex;
-    justify-content: center;
-    gap: 24px;
-    margin-top: 40px;
-}
-
-.btn-group *{
-    padding-top: 16px;
-    padding-bottom: 16px;
-}
-
 
 .ending-title {
     font-size: 30px;
-}
-.btn-group-desktop-only {
-    display: none;
 }
 
 
@@ -615,16 +612,6 @@ TESTIMONIALS
         font-size: 45px;
         margin-bottom: 33px;
         text-align: left;
-    }
-    .btn-group {
-        margin-top: 0;
-        justify-content: start;
-    }
-    .btn-group-desktop-only {
-        display: flex;
-    }
-    .btn-group-mobile-only {
-        display: none;
     }
     .stepImage {
         width: 100%;
