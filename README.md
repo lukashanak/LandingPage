@@ -1,1 +1,1 @@
-# amazing-tereshkova-fb39ea.netlify.app/
+amazing-tereshkova-fb39ea.netlify.app/
