@@ -2,17 +2,18 @@
 
 
 /* TABLE OF CONTENT
-    0. HTML, BODY, VARIABLES, CONTAINERS 
+    -1. HTML, BODY, VARIABLES, CONTAINERS 
+    0. TYPOGRAPHY
     1. CONTAINERS, TYPOGRAPHY,  BUTTONS
     2. HEADER
         2.1. NAVBAR
         2.2. INTRODUCTION
-    
+    3. 
 */
 
 
 /* =================
-0. HTML, BODY, VARIABLES, CONTAINERS
+-1. HTML, BODY, VARIABLES, CONTAINERS
 =================== */
 
 *, *:before, *:after {
@@ -27,6 +28,10 @@ body {
     margin: 0;
     padding: 0;
     font-family: 'Poppins', sans-serif;
+}
+
+h1, h2, h3, p {
+    margin: 0;
 }
 
 .container-wide {
@@ -54,16 +59,20 @@ body {
 }
 
 /* =================
-1. TYPOGRAPHY,  BUTTONS
+0. TYPOGRAPHY
 =================== */
 
- h1, h2, h3, p {
-    margin: 0;
-}
+
+
+/* =================
+1. BUTTONS
+=================== */
+
+
 
 /* 1.1 Play Button */
 
-.playBtn {
+.play-btn {
     position: absolute;
     left: 50%;
     top: 50%;
@@ -74,7 +83,7 @@ body {
 }
 
 @media (min-width: 1500px) {
-    .playBtn {
+    .play-btn {
         width: 180px;
         margin-left: -90px; 
         margin-top: -90px; 
@@ -93,7 +102,7 @@ body {
     background-color: #FBBC05;
 }
 
-/* 1.3 Add to chrome btn */
+/* 1.3 Action btn */
 
 
 .action-btn {
@@ -107,6 +116,9 @@ body {
     background-color: #FCAF17;
     cursor: pointer;
 }
+
+
+/* 1.4 Login btn */
 
 .login-btn {
     width: 40%;
@@ -124,6 +136,9 @@ body {
     background-color: #FAFAFA;
 }
 
+
+/* 1.5 Btn group */
+
 .btn-group {
     display: flex;
     justify-content: center;
@@ -131,7 +146,7 @@ body {
     margin-top: 40px;
 }
 
-.btn-group *{
+.btn-group * {
     padding-top: 16px;
     padding-bottom: 16px;
 }
@@ -180,7 +195,30 @@ header {
         /* 2.2 INTRODUCTION */
 
 
-        .introduction {
+        .title {
+            font-size: 35px;
+            font-weight: bold;
+        }
+        
+        .introduction-title {
+            margin-bottom: 12px;
+        }
+        
+        .description {
+            font-size: 16px;
+            margin-bottom: 45px;
+        }
+        
+        @media (min-width: 1500px) {
+            .title {
+                font-size: 60px;
+            }
+            .description {
+                font-size: 22px;
+            }
+        }
+
+        .introduction-section {
             max-width:550px;
             height: 80vh;
             display: flex;
@@ -198,21 +236,6 @@ header {
         }
 
 
-        .title {
-            font-size: 35px;
-            font-weight: bold;
-        }
-
-        .introduction-title {
-            margin-bottom: 12px;
-        }
-
-        .description {
-            font-size: 16px;
-            margin-bottom: 45px;
-        }
-
-
         .video-playback-preview {
             width: 100%;
             margin-top: 27px;
@@ -224,32 +247,32 @@ header {
         }
 
 
-@media (min-width: 1500px) {
-    .introduction {
-        max-width: none;
-        flex-direction: row;
-    }
-    .box {
-        display: inline-block;
-        width: 50%;
-        height: 490px;
-        text-align: left;
-    }
-    .box-text {
-        width: 550px;
-    }
-    .title {
-        font-size: 60px;
-    }
-    .description {
-        font-size: 22px;
-    }
-    .video-playback-preview {
-        margin-top: 10px;
-        width: 100%;
-        max-width:850px;
-    } 
-}
+        @media (min-width: 1500px) {
+            .introduction-section {
+                max-width: none;
+                flex-direction: row;
+            }
+            .box {
+                display: inline-block;
+                width: 50%;
+                height: 490px;
+                text-align: left;
+            }
+            .box-text {
+                width: 550px;
+            }
+            .title {
+                font-size: 60px;
+            }
+            .description {
+                font-size: 22px;
+            }
+            .video-playback-preview {
+                margin-top: 10px;
+                width: 100%;
+                max-width:850px;
+            } 
+        }
 
 
 /*
