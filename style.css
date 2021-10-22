@@ -41,7 +41,17 @@ body {
     }
 }
 
+@media (max-width: 1500px) {
+    .desktop-only {
+        display: none !important;
+    }
+}
 
+@media (min-width: 1501px) {
+    .mobile-only {
+        display: none !important;
+    }
+}
 
 /* =================
 1. TYPOGRAPHY,  BUTTONS
@@ -81,19 +91,6 @@ body {
 
 .action-btn:hover {
     background-color: #FBBC05;
-}
-
-.action-btn-desktop-only {
-    display: none;
-}
-
-@media (min-width: 1500px) {
-    .action-btn-desktop-only {
-        display: inline-block;
-    }
-    .action-btn-mobile-only {
-        display: none;
-    }
 }
 
 /* 1.3 Add to chrome btn */
@@ -139,20 +136,10 @@ body {
     padding-bottom: 16px;
 }
 
-.btn-group-desktop-only {
-    display: none;
-}
-
 @media (min-width: 1500px) {
     .btn-group {
         margin-top: 0;
         justify-content: start;
-    }
-    .btn-group-desktop-only {
-        display: flex;
-    }
-    .btn-group-mobile-only {
-        display: none;
     }
 }
 
@@ -631,7 +618,3 @@ footer {
   background-color: #141414;
   color: #F2F2F2;
 }
-
-
-
-
