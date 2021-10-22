@@ -2,8 +2,18 @@
 
 
 /* TABLE OF CONTENT
-
+    0. HTML, BODY, VARIABLES, CONTAINERS 
+    1. CONTAINERS, TYPOGRAPHY,  BUTTONS
+    2. HEADER
+        2.1. NAVBAR
+        2.2. INTRODUCTION
+    
 */
+
+
+/* =================
+0. HTML, BODY
+=================== */
 
 *, *:before, *:after {
     box-sizing: border-box;
@@ -19,68 +29,41 @@ body {
     font-family: 'Poppins', sans-serif;
 }
 
-  h1, h2, h3, p {
-    margin: 0;
-}
-
-
-.container-fluid {
+.container-wide {
     width: 85%;
     max-width: 550px;
     margin: auto;
 }
 
-/* ========
- container-1
-  ======== */
-
-header {
-    height: 100vh;
+@media (min-width: 1500px) {
+    .container-wide {
+        max-width: none;
+    }
 }
 
-.introduction {
-    max-width:550px;
-    height: 80vh;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    flex-direction: column;
-}
+/* =================
+1. TYPOGRAPHY,  BUTTONS
+=================== */
 
-.navbar {
-    max-width: 550px;
-}
-
-nav ul {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    list-style: none;
-    padding-left: 0;
-}
-
-.box {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
+ h1, h2, h3, p {
+    margin: 0;
 }
 
 
-.title {
-    font-size: 35px;
-    font-weight: bold;
+
+.action-btn {
+    margin-top: 28px;
+}
+.action-btn-desktop {
+    display: inline-block;
+}
+.action-btn-mobile {
+    display: none;
 }
 
-.introduction-title {
-    margin-bottom: 12px;
+.action-btn-desktop {
+    display: none;
 }
-
-.description {
-    font-size: 16px;
-}
-
 
 .action-btn {
     width: 80%;
@@ -108,15 +91,42 @@ nav ul {
 }
 
 
-.video-playback-preview {
-    width: 100%;
-    margin-top: 27px;
-    margin-bottom: 45px;
+.add-to-chrome-btn {
+    width: 60%;
+    max-width: 313px;
+    font-size: 16px;
+    color: white;
+    border: none;
+    border-radius: 6px;
+    background-color: #FCAF17;
+    cursor: pointer;
 }
 
-.video-container {
-    position: relative;
+.add-to-chrome-btn:hover {
+    background-color: #FBBC05;
 }
+
+.add-to-chrome-btn span {
+    font-weight: 600;
+}
+
+.login-btn {
+    width: 40%;
+    max-width: 162px;
+    border: 3px solid #FCAF17;
+    border-radius: 6px;
+    background-color: white;
+    color: #FCAF17;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+.login-btn:hover {
+    background-color: #FAFAFA;
+}
+
+
+
 .playBtn {
     position: absolute;
     left: 50%;
@@ -127,25 +137,95 @@ nav ul {
     cursor: pointer;
 }
 
-.action-btn-desktop {
-    display: none;
-}
-
 @media (min-width: 1500px) {
     .playBtn {
         width: 180px;
         margin-left: -90px; 
         margin-top: -90px; 
     }
-    .container-fluid {
-        max-width: none;
-    }
-    .navbar {
-        max-width: none;
-    } 
-    .logo-icon {
-        width: 140px;
-    }
+}
+
+
+/* ========
+ 2. HEADER
+  ======== */
+
+header {
+    height: 100vh;
+}
+
+    /* 2.1 NAVBAR */
+
+        .navbar {
+            max-width: 550px;
+        }
+
+        nav ul {
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+            list-style: none;
+            padding-left: 0;
+        }
+
+        @media (min-width: 1500px) {
+            .navbar {
+                max-width: none;
+            } 
+            .logo-icon {
+                width: 140px;
+            }
+        }
+
+
+
+        /* 2.2 INTRODUCTION */
+
+
+        .introduction {
+            max-width:550px;
+            height: 80vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-direction: column;
+        }
+
+        .box {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+        }
+
+
+        .title {
+            font-size: 35px;
+            font-weight: bold;
+        }
+
+        .introduction-title {
+            margin-bottom: 12px;
+        }
+
+        .description {
+            font-size: 16px;
+        }
+
+
+        .video-playback-preview {
+            width: 100%;
+            margin-top: 27px;
+            margin-bottom: 45px;
+        }
+
+        .video-container {
+            position: relative;
+        }
+
+
+@media (min-width: 1500px) {
     .introduction {
         max-width: none;
         flex-direction: row;
@@ -170,15 +250,6 @@ nav ul {
         width: 100%;
         max-width:850px;
     } 
-    .action-btn {
-        margin-top: 28px;
-    }
-    .action-btn-desktop {
-        display: inline-block;
-    }
-    .action-btn-mobile {
-        display: none;
-    }
 }
 
 
@@ -513,39 +584,6 @@ TESTIMONIALS
     padding-bottom: 16px;
 }
 
-.add-to-chrome-btn {
-    width: 60%;
-    max-width: 313px;
-    font-size: 16px;
-    color: white;
-    border: none;
-    border-radius: 6px;
-    background-color: #FCAF17;
-    cursor: pointer;
-}
-
-.add-to-chrome-btn:hover {
-    background-color: #FBBC05;
-}
-
-.add-to-chrome-btn span {
-    font-weight: 600;
-}
-
-.login-btn {
-    width: 40%;
-    max-width: 162px;
-    border: 3px solid #FCAF17;
-    border-radius: 6px;
-    background-color: white;
-    color: #FCAF17;
-    font-size: 16px;
-    cursor: pointer;
-}
-
-.login-btn:hover {
-    background-color: #FAFAFA;
-}
 
 .ending-title {
     font-size: 30px;
