@@ -1,4 +1,3 @@
-
 /* TABLE OF CONTENT
     -1. HTML, BODY, VARIABLES, CONTAINERS 
     0. TYPOGRAPHY
@@ -14,9 +13,11 @@
 -1. HTML, BODY, VARIABLES, CONTAINERS
 =================== */
 
-*, *:before, *:after {
+*,
+*:before,
+*:after {
     box-sizing: border-box;
-  }
+}
 
 html {
     scroll-behavior: smooth;
@@ -25,10 +26,12 @@ html {
 body {
     margin: 0;
     padding: 0;
-    font-family: 'Poppins', sans-serif;
 }
 
-h1, h2, h3, p {
+h1,
+h2,
+h3,
+p {
     margin: 0;
 }
 
@@ -44,23 +47,70 @@ h1, h2, h3, p {
     }
 }
 
-@media (max-width: 1500px) {
-    .desktop-only {
-        display: none !important;
-    }
-}
-
-@media (min-width: 1501px) {
-    .mobile-only {
-        display: none !important;
-    }
-}
-
 /* =================
 0. TYPOGRAPHY
 =================== */
 
 
+body {
+    font-family: 'Poppins', sans-serif;
+}
+
+h1 {
+    font-size: 35px;
+    margin-bottom: 10px;
+}
+
+h2 {
+    font-size: 25px;
+    margin-bottom: 52px;
+}
+
+h3 {
+    font-size: 18px;
+}
+
+p {
+    font-size: 16px;
+}
+
+@media (min-width: 1500px) {
+    h1 {
+        font-size: 60px;
+    }
+    h2 {
+        font-size: 50px;
+    }
+    h3 {
+        font-size: 35px;
+    }
+    p {
+        font-size: 22px;
+    }
+}
+
+
+.introduction-title {
+    margin-bottom: 12px;
+}
+
+.introduction-description {
+    margin-bottom: 27px;
+}
+
+.section-title {
+    margin-bottom: 50px;
+}
+
+@media (min-width: 1500px) {
+.section-title {
+    margin-bottom: 150px;
+    }    
+}
+
+.step-title {
+    margin-bottom: 12px;
+}
 
 /* =================
 1. BUTTONS
@@ -75,33 +125,21 @@ h1, h2, h3, p {
     left: 50%;
     top: 50%;
     width: 120px;
-    margin-left: -60px; 
-    margin-top: -60px; 
+    margin-left: -60px;
+    margin-top: -60px;
     cursor: pointer;
 }
 
 @media (min-width: 1500px) {
     .play-btn {
         width: 180px;
-        margin-left: -90px; 
-        margin-top: -90px; 
+        margin-left: -90px;
+        margin-top: -90px;
     }
 }
 
 
-/* 1.2 Action button */ 
-
-
-.action-btn span {
-    font-weight: 600;
-}
-
-.action-btn:hover {
-    background-color: #FBBC05;
-}
-
-/* 1.3 Action btn */
-
+/* 1.2 Action button */
 
 .action-btn {
     width: 60%;
@@ -115,8 +153,15 @@ h1, h2, h3, p {
     cursor: pointer;
 }
 
+.action-btn span {
+    font-weight: 600;
+}
 
-/* 1.4 Login btn */
+.action-btn:hover {
+    background-color: #FBBC05;
+}
+
+/* 1.3 Login btn */
 
 .login-btn {
     width: 40%;
@@ -135,7 +180,7 @@ h1, h2, h3, p {
 }
 
 
-/* 1.5 Btn group */
+/* 1.4 Btn group */
 
 .btn-group {
     display: flex;
@@ -144,7 +189,7 @@ h1, h2, h3, p {
     margin-top: 40px;
 }
 
-.btn-group * {
+.btn-group > * {
     padding-top: 16px;
     padding-bottom: 16px;
 }
@@ -157,6 +202,7 @@ h1, h2, h3, p {
 }
 
 
+
 /* ========
  2. HEADER
   ======== */
@@ -165,118 +211,95 @@ header {
     height: 100vh;
 }
 
-    /* 2.1 NAVBAR */
+/* 2.1 NAVBAR */
 
-        .navbar {
-            max-width: 550px;
-        }
+.navbar {
+    max-width: 550px;
+}
 
-        nav ul {
-            display: flex;
-            flex-direction: row;
-            justify-content: space-between;
-            list-style: none;
-            padding-left: 0;
-        }
+nav ul {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    list-style: none;
+    padding-left: 0;
+}
 
-        @media (min-width: 1500px) {
-            .navbar {
-                max-width: none;
-            } 
-            .logo-icon {
-                width: 140px;
-            }
-        }
+@media (min-width: 1500px) {
+    .navbar {
+        max-width: none;
+    }
 
-
-
-        /* 2.2 INTRODUCTION */
+    .logo-icon {
+        width: 140px;
+    }
+}
 
 
-        .title {
-            font-size: 35px;
-            font-weight: bold;
-        }
-        
-        .introduction-title {
-            margin-bottom: 12px;
-        }
-        
-        .description {
-            font-size: 16px;
-            margin-bottom: 45px;
-        }
-        
-        @media (min-width: 1500px) {
-            .title {
-                font-size: 60px;
-            }
-            .description {
-                font-size: 22px;
-            }
-        }
 
-        .introduction-section {
-            max-width:550px;
-            height: 80vh;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            flex-direction: column;
-        }
-
-        .box {
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            align-items: center;
-            text-align: center;
-        }
+/* 2.2 INTRODUCTION */
 
 
-        .video-playback-preview {
-            width: 100%;
-            margin-top: 27px;
-            margin-bottom: 45px;
-        }
+/* 2.2.1 introduction-section */
 
-        .video-container {
-            position: relative;
-        }
-
-
-        @media (min-width: 1500px) {
-            .introduction-section {
-                max-width: none;
-                flex-direction: row;
-            }
-            .box {
-                display: inline-block;
-                width: 50%;
-                height: 490px;
-                text-align: left;
-            }
-            .box-text {
-                width: 550px;
-            }
-            .title {
-                font-size: 60px;
-            }
-            .description {
-                font-size: 22px;
-            }
-            .video-playback-preview {
-                margin-top: 10px;
-                width: 100%;
-                max-width:850px;
-            } 
-        }
+.introduction-section {
+    max-width: 550px;
+    height: 80vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+@media (min-width: 1500px) {
+    .introduction-section {
+        max-width: none;
+        flex-direction: row;
+    }
+}
 
 
-/*
-todo:
-- fix some small issues (for example, the title has to be in 2 rows not in just one)
-*/
+/* 2.2.2 box */
+
+
+.box {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+@media (min-width: 1500px) {
+    .box {
+        display: inline-block;
+        width: 50%;
+        height: 490px;
+        text-align: left;
+    }
+    .box-text {
+        width: 550px;
+    }
+}
+
+
+/* 2.2.3 video container */
+
+.video-container {
+    position: relative;
+}
+
+.video-playback-preview {
+    width: 100%;
+    margin-top: 27px;
+    margin-bottom: 45px;
+}
+@media (min-width: 1500px) {
+    .video-playback-preview {
+        margin-top: 10px;
+        width: 100%;
+        max-width: 850px;
+    }
+}
+
 
 .arrowDownContainer {
     position: absolute;
@@ -291,28 +314,17 @@ todo:
     width: 40px;
     cursor: pointer;
 }
-
-
-.text-center {
-    text-align: center;
-}
-
-.section-title {
-    font-size: 25px;
-    font-weight: 600;
-    margin-bottom: 102px;
-}
-
 @media (min-width: 1500px) {
-    .section-title {
-        font-size: 50px;
-        margin-bottom: 192px;
-    }
     .arrowDown {
         width: 70px;
     }
 }
 
+
+
+/* ==========
+2. STEPS SECTION
+========= */
 
 .steps {
     background-color: #F8F8F8;
@@ -321,34 +333,6 @@ todo:
     flex-direction: column;
     align-items: center;
 }
-
-
-/* ==========
-2. STEPS SECTION
-========= */
-
-/* FONTS + FONT SPACING */
-
-.step-title {
-    font-size: 18px;
-    font-weight: 600;
-    position: relative;
-}
-
-.step-description {
-    font-size: 16px;
-}
-
-
-@media (min-width: 1500px) {
-    .step-title {
-        font-size: 35px;
-    }
-    .step-description {
-        font-size: 22px;
-    }
-}
-
 
 /* 2.1. ROW, LAYOUT */
 
@@ -359,11 +343,11 @@ todo:
         justify-content: center;
         margin-bottom: 60px;
     }
-    
-    .row > * {
+
+    .row>* {
         width: 50%;
     }
-    
+
     .row-odd {
         flex-direction: row-reverse;
     }
@@ -373,58 +357,54 @@ todo:
 /* 2.2 TEXT CONTAINER */
 
 @media (min-width: 1500px) {
-    .row-odd > .text-container {
+    .row-odd>.text-container {
         display: flex;
         justify-content: flex-start;
     }
-    
-    .row-even > .text-container {
+
+    .row-even>.text-container {
         display: flex;
         justify-content: flex-end;
     }
-      
-            .sub-container {
-                width: 600px;
-                display: flex;
-                align-items: center;
-                position: relative;
-            }
-    
-                .top {
-                    position: relative;
-                }
-                .bottom {
-                    position: absolute;
-                }
-    
-                .row-odd * .top {
-                    left: 0px;
-                    top: -120px;
-                }
-    
-                .row-odd * .bottom {
-                    left: 120px;
-                    width: 70%;
-                }
-    
-    
-                .row-even * .top {
-                    left: 60px;
-                    top: -120px;
-                }   
-    
-                .row-even * .bottom {
-                    right: 0px;
-                    width: 70%;
-                }
-    
-                .counterImg {
-                    width: 157px;
-                }
-    
-    
-    .step-title {
-        font-size: 35px;
+
+    .sub-container {
+        width: 600px;
+        display: flex;
+        align-items: center;
+        position: relative;
+    }
+
+    .top {
+        position: relative;
+    }
+
+    .bottom {
+        position: absolute;
+    }
+
+    .row-odd * .top {
+        left: 0px;
+        top: -120px;
+    }
+
+    .row-odd * .bottom {
+        left: 120px;
+        width: 70%;
+    }
+
+
+    .row-even * .top {
+        left: 60px;
+        top: -120px;
+    }
+
+    .row-even * .bottom {
+        right: 0px;
+        width: 70%;
+    }
+
+    .counterImg {
+        width: 157px;
     }
 }
 
@@ -437,12 +417,15 @@ todo:
         width: 100%;
         max-width: 574px;
     }
+
     .img-container {
         display: flex;
     }
-    .row-odd > .img-container {
+
+    .row-odd>.img-container {
         justify-content: flex-end;
     }
+
     .row-even {
         justify-content: flex-start;
     }
@@ -454,46 +437,36 @@ todo:
         flex-direction: column;
         margin-bottom: 80px;
     }
-    .row > * {
+
+    .row>* {
         width: 100%;
     }
+
     .counterImg {
         width: 74px;
         position: absolute;
         top: -37px;
         left: 0px;
     }
+
     .text-container {
         display: flex;
         flex-direction: column;
         position: relative;
     }
+
     .bottom {
         margin-left: 50px;
     }
+
     .img-container {
         justify-self: center;
         align-items: center;
     }
+
     .stepImg {
         width: 100%;
     }
-
-    /*
-    .counterImg {
-        width: 74px;
-        position: absolute;
-        top: 20px;
-        left: -30px;
-    }
-    .text-container {
-        margin-bottom: 80px;
-    }
-    .row-odd * .bottom {
-        left: 25px;
-        width: 100%;
-    }
-    */
 
 }
 
@@ -515,7 +488,8 @@ TESTIMONIALS
     width: 100%;
     margin-bottom: 20px;
     border-radius: 6px;
-    padding: 30px 50px 23px 37px;  /* t r b l, starting from the TOP */
+    padding: 30px 50px 23px 37px;
+    /* t r b l, starting from the TOP */
     max-width: 516px;
     background-color: white;
 }
@@ -535,7 +509,7 @@ TESTIMONIALS
     font-weight: 600;
     color: #111111;
     vertical-align: top;
-    position:relative;
+    position: relative;
     top: 8px;
 }
 
@@ -544,7 +518,7 @@ TESTIMONIALS
     font-size: 10px;
     color: #B2B2B2;
     vertical-align: top;
-    position:relative;
+    position: relative;
     top: 12px;
 }
 
@@ -564,6 +538,7 @@ TESTIMONIALS
         padding-top: 146px;
         padding-bottom: 100px
     }
+
     .testimonials-row {
         display: flex;
         justify-content: center;
@@ -588,11 +563,6 @@ TESTIMONIALS
     max-width: 539px;
 }
 
-.margin-bottom-36px {
-    margin-bottom: 36px;
-}
-
-
 .ending-title {
     font-size: 30px;
 }
@@ -610,17 +580,20 @@ TESTIMONIALS
         padding-top: 150px;
         padding-bottom: 259px;
     }
+
     .ending-top {
         max-width: 598px;
         display: flex;
         flex-direction: column;
-       justify-content: center;
+        justify-content: center;
     }
+
     .ending-title {
         font-size: 45px;
         margin-bottom: 33px;
         text-align: left;
     }
+
     .stepImage {
         width: 100%;
         max-width: 574px;
@@ -636,6 +609,33 @@ FOOTER
 
 
 footer {
-  background-color: #141414;
-  color: #F2F2F2;
+    background-color: #141414;
+    color: #F2F2F2;
+}
+
+
+
+/* =======
+UTILITIES 
+========= */
+
+
+.text-center {
+    text-align: center;
+}
+
+.margin-bottom-36px {
+    margin-bottom: 36px;
+}
+
+@media (max-width: 1500px) {
+    .desktop-only {
+        display: none !important;
+    }
+}
+
+@media (min-width: 1501px) {
+    .mobile-only {
+        display: none !important;
+    }
 }
