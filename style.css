@@ -78,12 +78,15 @@ p {
     h1 {
         font-size: 60px;
     }
+
     h2 {
         font-size: 50px;
     }
+
     h3 {
         font-size: 35px;
     }
+
     p {
         font-size: 22px;
     }
@@ -153,9 +156,6 @@ p {
     cursor: pointer;
 }
 
-.action-btn span {
-    font-weight: 600;
-}
 
 .action-btn:hover {
     background-color: #FBBC05;
@@ -217,7 +217,7 @@ header {
     max-width: 550px;
 }
 
-nav ul {
+.navbar-ul {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
@@ -250,6 +250,7 @@ nav ul {
     justify-content: center;
     flex-direction: column;
 }
+
 @media (min-width: 1500px) {
     .introduction-section {
         max-width: none;
@@ -268,6 +269,7 @@ nav ul {
     align-items: center;
     text-align: center;
 }
+
 @media (min-width: 1500px) {
     .box {
         display: inline-block;
@@ -292,6 +294,7 @@ nav ul {
     margin-top: 27px;
     margin-bottom: 45px;
 }
+
 @media (min-width: 1500px) {
     .video-playback-preview {
         margin-top: 10px;
@@ -314,6 +317,7 @@ nav ul {
     width: 40px;
     cursor: pointer;
 }
+
 @media (min-width: 1500px) {
     .arrowDown {
         width: 70px;
@@ -323,7 +327,7 @@ nav ul {
 
 
 /* ==========
-2. STEPS SECTION
+2. STEPS SECTION  - IGNORE THIS SECTION, IT'S PURE PAIN TO READ :D but it works so I won't refactor
 ========= */
 
 .steps {
@@ -334,7 +338,18 @@ nav ul {
     align-items: center;
 }
 
-/* 2.1. ROW, LAYOUT */
+/* 2.1. ROW */
+
+@media (max-width: 1500px) {
+    .row {
+        flex-direction: column;
+        margin-bottom: 80px;
+    }
+
+    .row > * {
+        width: 100%;
+    }
+}
 
 @media (min-width: 1500px) {
     .row {
@@ -343,29 +358,35 @@ nav ul {
         justify-content: center;
         margin-bottom: 60px;
     }
-
-    .row>* {
-        width: 50%;
+    .row-even {
+        flex-direction: row;
+        justify-content: flex-start;
     }
-
     .row-odd {
         flex-direction: row-reverse;
+    }
+    .row > * {
+        width: 50%;
     }
 }
 
 
-/* 2.2 TEXT CONTAINER */
+
+
+
+/* 2.2 TEXT SIDE OF THE ROW */
 
 @media (min-width: 1500px) {
-    .row-odd>.text-container {
+    .row-odd >.text-side {
         display: flex;
         justify-content: flex-start;
     }
 
-    .row-even>.text-container {
+    .row-even >.text-side {
         display: flex;
         justify-content: flex-end;
     }
+}
 
     .sub-container {
         width: 600px;
@@ -406,42 +427,8 @@ nav ul {
     .counterImg {
         width: 157px;
     }
-}
-
-
-/* 2.3. IMAGE CONTAINER */
-
-@media (min-width: 1500px) {
-
-    .stepImg {
-        width: 100%;
-        max-width: 574px;
-    }
-
-    .img-container {
-        display: flex;
-    }
-
-    .row-odd>.img-container {
-        justify-content: flex-end;
-    }
-
-    .row-even {
-        justify-content: flex-start;
-    }
-}
-
 
 @media (max-width: 1500px) {
-    .row {
-        flex-direction: column;
-        margin-bottom: 80px;
-    }
-
-    .row>* {
-        width: 100%;
-    }
-
     .counterImg {
         width: 74px;
         position: absolute;
@@ -449,7 +436,7 @@ nav ul {
         left: 0px;
     }
 
-    .text-container {
+    .text-side {
         display: flex;
         flex-direction: column;
         position: relative;
@@ -458,83 +445,51 @@ nav ul {
     .bottom {
         margin-left: 50px;
     }
+}
 
-    .img-container {
+
+/* 2.3. IMAGE SIDE OF THE ROW */
+
+@media (min-width: 1500px) {
+    .stepImg {
+        width: 100%;
+        max-width: 574px;
+    }
+    .image-side {
+        display: flex;
+    }
+    .row-odd > .image-side {
+        justify-content: flex-end;
+    }
+}
+
+
+@media (max-width: 1500px) {
+    .image-side {
         justify-self: center;
         align-items: center;
     }
-
     .stepImg {
         width: 100%;
     }
-
 }
 
 
 
 
 /* =======
-TESTIMONIALS 
+3. TESTIMONIALS SECTION
 ======== */
 
 
-.testimonials {
+.testimonials-section {
     padding-top: 96px;
     padding-bottom: 100px;
     background-color: #E9E9E9;
 }
 
-.testimonials-card {
-    width: 100%;
-    margin-bottom: 20px;
-    border-radius: 6px;
-    padding: 30px 50px 23px 37px;
-    /* t r b l, starting from the TOP */
-    max-width: 516px;
-    background-color: white;
-}
-
-.testimonials-card-top {
-    display: flex;
-    justify-content: space-between;
-    margin-bottom: 12px;
-}
-
-.card-avatar {
-    margin-right: 5px;
-}
-
-.card-name {
-    font-size: 15px;
-    font-weight: 600;
-    color: #111111;
-    vertical-align: top;
-    position: relative;
-    top: 8px;
-}
-
-
-.card-name-description {
-    font-size: 10px;
-    color: #B2B2B2;
-    vertical-align: top;
-    position: relative;
-    top: 12px;
-}
-
-.card-review {
-    font-size: 16px;
-}
-
-@media (max-width: 380px) {
-    .card-name-description {
-        display: none;
-    }
-}
-
-
 @media (min-width: 1500px) {
-    .testimonials {
+    .testimonials-section {
         padding-top: 146px;
         padding-bottom: 100px
     }
@@ -548,7 +503,61 @@ TESTIMONIALS
 }
 
 
-/* ending */
+/* CARD */ 
+
+.testimonial-card {
+    width: 100%;
+    margin-bottom: 20px;
+    border-radius: 6px;
+    padding: 30px 50px 23px 37px;
+    max-width: 516px;
+    background-color: white;
+}
+
+.testimonial-top {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 12px;
+}
+
+.testimonials-avatar {
+    margin-right: 5px;
+}
+
+.testimonial-name {
+    font-size: 15px;
+    font-weight: 600;
+    color: #111111;
+    vertical-align: top;
+    position: relative;
+    top: 8px;
+}
+
+
+.testimonial-name-description {
+    font-size: 10px;
+    color: #B2B2B2;
+    vertical-align: top;
+    position: relative;
+    top: 12px;
+}
+
+.testimonial-content {
+    font-size: 16px;
+}
+
+@media (max-width: 380px) {
+    .testimonial-content {
+        display: none;
+    }
+}
+
+
+
+
+/* =======
+4. ENDING SECTION
+======== */
 
 .ending-container {
     display: flex;
@@ -604,7 +613,7 @@ TESTIMONIALS
 
 
 /* ==========
-FOOTER 
+5. FOOTER 
 ============ */
 
 
@@ -616,7 +625,7 @@ footer {
 
 
 /* =======
-UTILITIES 
+6. UTILITIES 
 ========= */
 
 
