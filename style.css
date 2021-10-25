@@ -332,10 +332,6 @@ header {
 3. STEPS SECTION
 ========= */
 
-.step-title {
-    margin-bottom: 12px;
-}
-
 .steps {
     background-color: #F8F8F8;
     padding-top: 50px;
@@ -344,18 +340,7 @@ header {
     align-items: center;
 }
 
-/* 3.1. ROW */
-
-@media (max-width: 1500px) {
-    .row {
-        flex-direction: column;
-        margin-bottom: 80px;
-    }
-
-    .row > * {
-        width: 100%;
-    }
-}
+/* 2.1. ROW, LAYOUT */
 
 @media (min-width: 1500px) {
     .row {
@@ -364,35 +349,29 @@ header {
         justify-content: center;
         margin-bottom: 60px;
     }
-    .row-even {
-        flex-direction: row;
-        justify-content: flex-start;
+
+    .row>* {
+        width: 50%;
     }
+
     .row-odd {
         flex-direction: row-reverse;
     }
-    .row > * {
-        width: 50%;
-    }
 }
 
 
-
-
-
-/* 3.2 TEXT SIDE OF THE ROW */
+/* 2.2 TEXT CONTAINER */
 
 @media (min-width: 1500px) {
-    .row-odd >.text-side {
+    .row-odd>.text-container {
         display: flex;
         justify-content: flex-start;
     }
 
-    .row-even >.text-side {
+    .row-even>.text-container {
         display: flex;
         justify-content: flex-end;
     }
-}
 
     .sub-container {
         width: 600px;
@@ -433,8 +412,42 @@ header {
     .counterImg {
         width: 157px;
     }
+}
+
+
+/* 2.3. IMAGE CONTAINER */
+
+@media (min-width: 1500px) {
+
+    .stepImg {
+        width: 100%;
+        max-width: 574px;
+    }
+
+    .img-container {
+        display: flex;
+    }
+
+    .row-odd>.img-container {
+        justify-content: flex-end;
+    }
+
+    .row-even {
+        justify-content: flex-start;
+    }
+}
+
 
 @media (max-width: 1500px) {
+    .row {
+        flex-direction: column;
+        margin-bottom: 80px;
+    }
+
+    .row>* {
+        width: 100%;
+    }
+
     .counterImg {
         width: 74px;
         position: absolute;
@@ -442,7 +455,7 @@ header {
         left: 0px;
     }
 
-    .text-side {
+    .text-container {
         display: flex;
         flex-direction: column;
         position: relative;
@@ -451,34 +464,20 @@ header {
     .bottom {
         margin-left: 50px;
     }
-}
 
-
-/* 3.3. IMAGE SIDE OF THE ROW */
-
-@media (min-width: 1500px) {
-    .stepImg {
-        width: 100%;
-        max-width: 574px;
-    }
-    .image-side {
-        display: flex;
-    }
-    .row-odd > .image-side {
-        justify-content: flex-end;
-    }
-}
-
-
-@media (max-width: 1500px) {
-    .image-side {
+    .img-container {
         justify-self: center;
         align-items: center;
     }
+
     .stepImg {
         width: 100%;
     }
+
 }
+
+
+
 
 
 
