@@ -244,6 +244,7 @@ header {
 
 /* 2.2.1 introduction-section */
 
+
 .introduction-section {
     max-width: 550px;
     height: 80vh;
@@ -251,48 +252,47 @@ header {
     align-items: center;
     justify-content: center;
     flex-direction: column;
+    margin-top: 100px;
 }
 
 @media (min-width: 1500px) {
     .introduction-section {
         max-width: none;
         flex-direction: row;
+        margin-top: 0px;
+        gap: 100px;
     }
 }
 
 
-/* 2.2.2 box */
-
+/*  box */
 
 .box {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
     text-align: center;
 }
 
 @media (min-width: 1500px) {
     .box {
-        display: inline-block;
-        width: 50%;
-        height: 490px;
-        text-align: left;
+        height: 480px;
     }
+}
+
+@media (min-width: 1500px) {
     .box-text {
-        width: 550px;
+        max-width: 550px;
+        text-align: left;
     }
 }
 
 
-/* 2.2.3 video container */
+/* video container */
 
 .video-container {
     position: relative;
 }
 
 .video-playback-preview {
-    width: 100%;
+    max-width: 100%;
     margin-top: 27px;
     margin-bottom: 45px;
 }
@@ -324,6 +324,8 @@ header {
         width: 70px;
     }
 }
+
+
 
 
 
