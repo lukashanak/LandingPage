@@ -315,13 +315,12 @@ header {
     justify-content: center;
 }
 
-.arrowDown {
+.arrow-down-icon {
     width: 40px;
-    cursor: pointer;
 }
 
 @media (min-width: 1500px) {
-    .arrowDown {
+    .arrow-down-icon {
         width: 70px;
     }
 }
@@ -505,6 +504,7 @@ header {
 
 .ending-title {
     font-size: 30px;
+    text-align: center;
 }
 
 @media (min-width: 1500px) {
@@ -584,3 +584,4 @@ footer {
         display: none !important;
     }
 }
+
