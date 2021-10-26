@@ -179,7 +179,7 @@ p {
 
 @media (min-width: 1500px) {
     .introduction-container {
-        height: 94vh;
+        height: 86vh;
     }
 }
 
@@ -278,6 +278,10 @@ p {
 .introduction-img-preview {
     max-width: 100%;
     height: auto;
+}
+
+@media (min-width: 1500px) {
+    margin-bottom: 60px;
 }
 
 .introduction-play-btn {
@@ -576,7 +580,7 @@ footer {
     }
 }
 
-@media (min-width: 1501px) {
+@media (min-width: 1500px) {
     .mobile-only {
         display: none !important;
     }
