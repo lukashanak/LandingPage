@@ -1,17 +1,3 @@
-/* TABLE OF CONTENT
-    -1. HTML, BODY, VARIABLES, CONTAINERS 
-    0. TYPOGRAPHY
-    1. CONTAINERS, TYPOGRAPHY,  BUTTONS
-    2. HEADER
-        2.1. NAVBAR
-        2.2. INTRODUCTION
-    3. 
-*/
-
-
-/* =================
--1. HTML, BODY, VARIABLES, CONTAINERS
-=================== */
 
 *,
 *:before,
@@ -43,7 +29,7 @@ p {
 
 @media (min-width: 1500px) {
     .container-wide {
-        max-width: none;
+        max-width: 1400px;
     }
 }
 
@@ -108,6 +94,7 @@ p {
     }
 }
 
+
 /* =================
 1. BUTTONS
 =================== */
@@ -116,23 +103,6 @@ p {
 
 /* 1.1 Play Button */
 
-.play-btn {
-    position: absolute;
-    left: 50%;
-    top: 50%;
-    width: 120px;
-    margin-left: -60px;
-    margin-top: -60px;
-    cursor: pointer;
-}
-
-@media (min-width: 1500px) {
-    .play-btn {
-        width: 180px;
-        margin-left: -90px;
-        margin-top: -90px;
-    }
-}
 
 
 /* 1.2 Action button */
@@ -196,42 +166,97 @@ p {
 
 
 
+
 /* ========
  2. HEADER
   ======== */
 
-header {
-    height: 100vh;
-}
 
-/* 2.1 NAVBAR */
-
-.navbar {
-    max-width: 550px;
-}
-
-.navbar-ul {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    list-style: none;
-    padding-left: 0;
+  nav {
+    margin: 0px;
+    padding: 0px;
 }
 
 @media (min-width: 1500px) {
-    .navbar {
-        max-width: none;
+    nav {
+        height: 6vh;
     }
+}
 
+@media (min-width: 1500px) {
+    .introduction-container {
+        height: 94vh;
+    }
+}
+
+/* HEADER NAVBAR */
+
+.navbar-ul {
+    display: flex;
+    justify-content: space-between;
+    list-style: none;
+    padding-left: 0;
+    margin: 0;
+    padding: 10px 0px;
+}
+
+.navbar-ul li {
+    z-index: 2;
+}
+
+
+@media (min-width: 1500px) {
     .logo-icon {
         width: 140px;
     }
 }
 
+/* HEADER INTRODUCTION SECTION*/
 
 
-/* 2.2 INTRODUCTION */
+.introduction-section {
+    margin-top: 60px;
+    margin-bottom: 80px;
+}
 
+@media (min-width: 1500px) {
+    .introduction-section {
+        margin-top: 0;
+    }
+}
+
+
+@media (min-width: 1500px) {
+    .introduction-container {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        position: relative;
+        top: -100px;
+        gap: 80px;
+    }
+}
+
+.introduction-side { 
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+@media (min-width: 1500px) {
+    .introduction-side {
+        width: 50%;
+        display: inline-block;
+    }
+}
+
+
+/* left side */
+
+.introduction-title,
+.introduction-description {
+    text-align: center;
+}
 
 .introduction-title {
     margin-bottom: 12px;
@@ -241,70 +266,45 @@ header {
     margin-bottom: 27px;
 }
 
-
-/* 2.2.1 introduction-section */
-
-
-.introduction-section {
-    max-width: 550px;
-    height: 80vh;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    flex-direction: column;
-    margin-top: 100px;
-}
-
 @media (min-width: 1500px) {
-    .introduction-section {
-        max-width: none;
-        flex-direction: row;
-        margin-top: 0px;
-        gap: 100px;
-    }
-}
-
-
-/*  box */
-
-.box {
-    text-align: center;
-}
-
-@media (min-width: 1500px) {
-    .box {
-        height: 480px;
-    }
-}
-
-@media (min-width: 1500px) {
-    .box-text {
-        max-width: 550px;
+    .introduction-title,
+    .introduction-description {
         text-align: left;
     }
 }
 
 
-/* video container */
 
-.video-container {
+/* right side */
+
+.introduction-img-wrapper {
     position: relative;
 }
 
-.video-playback-preview {
+.introduction-img-preview {
     max-width: 100%;
-    margin-top: 27px;
-    margin-bottom: 45px;
+    height: auto;
+}
+
+.introduction-play-btn {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    width: 120px;
+    margin-left: -60px;
+    margin-top: -60px;
+    cursor: pointer;
 }
 
 @media (min-width: 1500px) {
-    .video-playback-preview {
-        margin-top: 10px;
-        width: 100%;
-        max-width: 850px;
+    .introduction-play-btn {
+        width: 180px;
+        margin-left: -90px;
+        margin-top: -90px;
     }
 }
 
+/* arrow down icon */
 
 .arrowDownContainer {
     position: absolute;
@@ -383,6 +383,7 @@ header {
 .step-img {
     width: 100%;
     max-width: 550px;
+    /* box-shadow: 0px 0px 40px 20px rgba(240, 30, 30, 0.05); */
 }
 
 /* text container */
