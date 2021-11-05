@@ -495,14 +495,14 @@ p {
     top: 0.75rem;
 }
 
-.testimonial-content {
-    font-size: 1rem;
-}
-
 @media (max-width: 23.75rem) {
-    .testimonial-content {
+    .testimonial-name-description {
         display: none;
     }
+} 
+
+.testimonial-content {
+    font-size: 1rem;
 }
 
 
